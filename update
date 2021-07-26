@@ -1,0 +1,37 @@
+#!/usr/local/bin node
+
+const request = require('node-fetch');
+
+require('dotenv').config();
+
+const zoneId = process.env.ZONE_ID;
+const recordId = process.env.RECORD_ID;
+const endpoint = `https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records/${recordId}`;
+
+const ipEndpoint = 'https://api.ipify.org?format=json';
+
+async function main() {
+    let res = await request(ipEndpoint);
+    let json = await res.json();
+    let ip = json.ip;
+    if (!ip) return console.error('IP not given');
+
+    res = await request(endpoint, {
+        method: 'put',
+        headers: {
+            'X-Auth-Key': process.env.CLOUDFLARE_KEY,
+            'X-Auth-Email': process.env.EMAIL,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            type: process.env.TYPE,
+            content: ip,
+            name: process.env.DOMAIN,
+            proxied: process.env.PROXIED || true
+        })
+    });
+    json = await res.json();
+    console.log(json);
+} 
+
+main();
