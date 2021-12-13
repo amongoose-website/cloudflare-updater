@@ -1,0 +1,16 @@
+{
+    "records": [
+        {
+            "id": "be508c1fd9868932b7f156bb6b688957",
+            "domain": "media.amongoose.com",
+            "proxied": true,
+            "type": "A"
+        }, 
+        {
+            "id": "7596bd1ecdcbd7ee21e065c1629af9b4",
+            "domain": "emailer.amongoose.com",
+            "proxied": true,
+            "type": "A"
+        }
+    ]
+}
