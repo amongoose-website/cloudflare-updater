@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+const request = require('node-fetch');
+
+require('dotenv').config();
+
+const zoneId = process.env.ZONE_ID
+
+async function main() {
+    const endpoint = `https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records/`
+    const res = await request(endpoint, {
+        method: 'get',
+        headers: {
+            'X-Auth-Key': process.env.CLOUDFLARE_KEY,
+            'X-Auth-Email': process.env.EMAIL,
+            'Content-Type': 'application/json'
+        }
+    })
+    
+    json = await res.json();
+    json.result.map(record => {
+        const { id, name, type, content } = record
+        console.log({
+            id, name, type, content
+        })
+    })
+} 
+
+main();
