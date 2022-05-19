@@ -5,8 +5,6 @@ const request = require('node-fetch');
 require('dotenv').config();
 const data = require('./data');
 
-const zoneId = process.env.ZONE_ID
-
 if (!data.records || data.records.length < 0) {
     throw new Error('No record IDs given');
 }
@@ -23,7 +21,7 @@ async function main() {
     // Loop through records
 
     for (const record of data.records) {
-        const endpoint = `https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records/${record.id}`;
+        const endpoint = `https://api.cloudflare.com/client/v4/zones/${record.zoneId}/dns_records/${record.id}`;
         res = await request(endpoint, {
             method: 'put',
             headers: {
