@@ -19,6 +19,12 @@
             "domain": "joshua.grimmett.com.au",
             "type": "A",
             "zoneId": "6b636914f1afee5a11f0f380666a2d48"
+        },
+        {
+            "id": "60ddce688b0a3e75a66adc41cdba81f4",
+            "domain": "glow.grimmett.com.au",
+            "type": "A",
+            "zoneId": "6b636914f1afee5a11f0f380666a2d48"
         }
     ]
 }
