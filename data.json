@@ -21,10 +21,11 @@
             "zoneId": "6b636914f1afee5a11f0f380666a2d48"
         },
         {
-            "id": "60ddce688b0a3e75a66adc41cdba81f4",
-            "domain": "glow.grimmett.com.au",
+            "id": "1eb5e53d0917df34808d4a13f167d5b7",
+            "domain": "tv.amongoose.com",
             "type": "A",
-            "zoneId": "6b636914f1afee5a11f0f380666a2d48"
+            "proxied": true,
+            "zoneId": "cac5d3bd1125e777858a334be5701012"
         }
     ]
 }
