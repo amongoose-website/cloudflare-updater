@@ -32,6 +32,13 @@
             "type": "A",
             "proxied": true,
             "zoneId": "cac5d3bd1125e777858a334be5701012"
+        },
+        {
+            "id": "f83d5c4eedac9a9909d4396157bfd7b9",
+            "domain": "static.amongoose.com",
+            "type": "A",
+            "proxied": true,
+            "zoneId": "cac5d3bd1125e777858a334be5701012"
         }
     ]
 }
