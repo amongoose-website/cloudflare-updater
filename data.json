@@ -15,12 +15,6 @@
             "zoneId": "cac5d3bd1125e777858a334be5701012"
         },
         {
-            "id": "c0a0353a04f13eb555664826fb59e804",
-            "domain": "joshua.grimmett.com.au",
-            "type": "A",
-            "zoneId": "6b636914f1afee5a11f0f380666a2d48"
-        },
-        {
             "id": "81acde0f9a84f7a0667448d22a1002e0",
             "domain": "drive.grimmett.com.au",
             "type": "A",
@@ -36,6 +30,13 @@
         {
             "id": "f83d5c4eedac9a9909d4396157bfd7b9",
             "domain": "static.amongoose.com",
+            "type": "A",
+            "proxied": true,
+            "zoneId": "cac5d3bd1125e777858a334be5701012"
+        },
+        {
+            "id": "0d86d76adea71e925d2d10dad2ef0abe",
+            "domain": "check-in.amongoose.com",
             "type": "A",
             "proxied": true,
             "zoneId": "cac5d3bd1125e777858a334be5701012"
